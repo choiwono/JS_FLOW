@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport">
+        <title>JS Bin</title>
+    </head>
+    <body>
+        <ul>
+            <li>apple</li>
+            <li>orange</li>
+            <li>banana</li>
+            <li>strawberry</li>
+        </ul>
+        <script>
+            // filter, includes, from을 사용
+            // li 리스트를 모두 받아서 문자열 e가 포함된 배열을 만들어서 반환하기
+            // node로 구성된 배열을 반환하면 가능
+            const print = function (){
+                let arr = document.getElementsByTagName("li");
+                let newArr = [];
+                const newArr2 = [];
+                for(let i of arr){
+                    newArr.push(i.innerHTML);
+                }
+                
+                newArr.filter(function(element, index,array){
+                    if(newArr[index].includes("e"))
+                        newArr2.push(newArr[index]);
+                })
+                console.log(newArr2);
+            }
+            print();
+
+            //풀이
+
+            function print2(){
+                let list = document.querySelectorAll("li");
+                let listArray = Array.from(list);
+                let eArray = listArray.filter(function(v){
+                    return v.innerText.includes("e");
+                });
+                console.log(eArray.length);
+            }
+            print2();
+
+        </script>
+    </body>
+</html>
