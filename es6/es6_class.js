@@ -18,4 +18,3 @@ console.log(toString.call(Health));
 // object assign 메서드
 // 클래스 모듈을 만드는 방법
 
-

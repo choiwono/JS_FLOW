@@ -1,0 +1,23 @@
+{
+  "name": "js_flow",
+  "version": "1.0.0",
+  "description": "인프런 강좌_자바스크립트 핵심원리 공부중..",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    "start" : "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/choiwono/JS_FLOW.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/choiwono/JS_FLOW/issues"
+  },
+  "homepage": "https://github.com/choiwono/JS_FLOW#readme",
+  "devDependencies": {
+    "webpack": "^4.39.1"
+  }
+}
