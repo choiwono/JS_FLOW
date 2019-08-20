@@ -9,7 +9,7 @@ export default {
     FormView.setup(document.querySelector('form'))
       .on('@submit', e => this.onSubmit(e.detail.input))
       .on('@reset', e => this.onReset())
-      
+      .on('@resetResult', e => this.onRestResultView())
     ResultView.setup(document.querySelector('#search-result'))  
   },
 
@@ -31,5 +31,10 @@ export default {
 
   onSearchResult(data){
     ResultView.render(data)
+  },
+
+  onRestResultView(){
+    console.log(tag, 'onResetResultView()')
+    ResultView.onReset()
   }
 }
