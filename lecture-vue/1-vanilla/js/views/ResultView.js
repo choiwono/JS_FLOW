@@ -14,10 +14,6 @@ ResultView.render = function(data = []){
     this.show()
 }
 
-ResultView.onReset = function(){
-    this.el.innerHTML = ''
-}
-
 ResultView.getSearchResultHtml = function (data) {
     return data.reduce((html,item) => {
         html += this.getSearchItemHtml(item)
