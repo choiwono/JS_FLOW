@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MVC with Vanilla.JS</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h2 class="container">검색</h2>
+    </header>
+
+    <div class="container">
+      <form v-on:submit.prevent="onSubmit" v-on:keyup="onKeyup">
+        <input type="text" v-model="query" placeholder="검색어를 입력하세요" autofocus>
+        <button v-on:click="onReset" v-show="query.length" type="reset" class="btn-reset"></button>
+      </form>
+    </div>
+    <ul id="search-model">
+      <li>검색결과..</li>
+    </ul>
+  </div>
+  <script src="https://unpkg.com/vue"></script>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
