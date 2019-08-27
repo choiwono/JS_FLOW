@@ -1,5 +1,4 @@
 import SearchModel from '../models/SearchModel.js'
-import KeywordModel from '../models/KeywordModel.js'
 
 new Vue({
     el : '#app',
@@ -13,7 +12,6 @@ new Vue({
     },
     created(){
         this.selectedTab = this.tabs[0]
-        this.onKeyword();
     },
     methods : {
         onSubmit(e){
@@ -37,18 +35,7 @@ new Vue({
             })
         },
         onClickTab(tab){
-            if(tab === '추천 검색어'){
-                this.selectedTab = this.tabs[0]
-                this.onKeyword();
-            } else {
-                this.selectedTab = tab;
-                this.keywords = [];
-            }
-        },
-        onKeyword(){
-            KeywordModel.list().then(data => {
-                this.keywords = data;
-            })
+            this.selectedTab = tab;
         }
     }
 })

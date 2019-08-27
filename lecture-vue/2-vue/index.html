@@ -37,9 +37,12 @@
             {{ tab }}
           </li>
         </ul>
-        <ul v-for="keyword in keywords">
-          <li>{{ keyword.keyword }}</li>
-        </ul>
+        <div v-if="selectedTab === tabs[0]">
+          추천 검색어
+        </div>
+        <div v-else>
+          최근 검색어
+        </div>
       </div>
     </div>
   </div>
