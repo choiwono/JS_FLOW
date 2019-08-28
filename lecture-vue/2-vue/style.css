@@ -52,11 +52,13 @@ ul.tabs {
   box-sizing: border-box;
   display: block;
   padding: 15px;
-  border-bottom: 1px solid #ccc; 
+  border-bottom: 1px solid #ccc;
+  border-left:1px solid #ccc;
+  border-right:1px solid #ccc;
   position: relative;
 }
 .list li:last-child {
-  border-bottom: none;
+  /*border-bottom: none;*/
 }
 .list li .number{
   margin-right: 15px;

@@ -21,6 +21,7 @@ new Vue({
     methods : {
         onSubmit(e){
             this.search()
+            this.history.push({keyword:this.query,date:'19-08-28'});
         },
         onReset(e){
             this.resetForm()
@@ -55,6 +56,12 @@ new Vue({
             HistoryModel.list().then(data => {
                 this.history = data
             })
+        },
+        removeHistory(data){
+            this.history = this.history.filter((el) => {
+                return el.keyword !== data;
+            });
+            //console.log(data);
         }
     }
 })
